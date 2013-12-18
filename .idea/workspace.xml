@@ -6,6 +6,11 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/fragment.java" changelist="d2f3f131-5df2-4f0d-92aa-255dca6fa288" time="1382718322590" ignored="false" />
     <file path="/Sokoban.java" changelist="d2f3f131-5df2-4f0d-92aa-255dca6fa288" time="1382721165516" ignored="false" />
+    <file path="/a.groovy" changelist="d2f3f131-5df2-4f0d-92aa-255dca6fa288" time="1387406633591" ignored="false" />
+    <file path="/a.html" changelist="d2f3f131-5df2-4f0d-92aa-255dca6fa288" time="1387406636555" ignored="false" />
+    <file path="/a.java" changelist="d2f3f131-5df2-4f0d-92aa-255dca6fa288" time="1387406643119" ignored="false" />
+    <file path="/sample.java" changelist="d2f3f131-5df2-4f0d-92aa-255dca6fa288" time="1387406642626" ignored="false" />
+    <file path="/a.xml" changelist="d2f3f131-5df2-4f0d-92aa-255dca6fa288" time="1387406650016" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,20 +74,49 @@
       <file leaf-file-name="Sokoban.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/ifmo/Sokoban.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="45" selection-start="3572" selection-end="3572" vertical-scroll-proportion="0.64324325">
+            <state line="15" column="33" selection-start="264" selection-end="264" vertical-scroll-proportion="0.43396226">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#332#341#0" expanded="true" />
-                <element signature="e#396#402#0" expanded="true" />
-                <element signature="e#457#463#0" expanded="true" />
-                <element signature="e#746#756#0" expanded="true" />
-                <element signature="e#1566#1576#0" expanded="true" />
-                <element signature="e#5217#5223#0" expanded="true" />
-                <element signature="e#8392#8402#0" expanded="true" />
-                <element signature="e#13537#13545#0" expanded="true" />
-                <element signature="e#13871#13879#0" expanded="true" />
-                <element signature="e#18027#18033#0" expanded="true" />
-                <element signature="e#21103#21109#0" expanded="true" />
+                <element signature="e#346#355#0" expanded="true" />
+                <element signature="e#410#416#0" expanded="true" />
+                <element signature="e#471#477#0" expanded="true" />
+                <element signature="e#760#770#0" expanded="true" />
+                <element signature="e#1580#1590#0" expanded="true" />
+                <element signature="e#5231#5237#0" expanded="true" />
+                <element signature="e#8406#8416#0" expanded="true" />
+                <element signature="e#13551#13559#0" expanded="true" />
+                <element signature="e#13885#13893#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Position.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/ifmo/Position.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pair.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/ifmo/Pair.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="39" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="APath.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/ifmo/APath.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="61" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#569#575#0" expanded="true" />
+                <element signature="e#3645#3651#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,6 +142,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/input" />
+        <option value="$PROJECT_DIR$/src/ru/ifmo/APath.java" />
+        <option value="$PROJECT_DIR$/src/ru/ifmo/Pair.java" />
+        <option value="$PROJECT_DIR$/src/ru/ifmo/Position.java" />
         <option value="$PROJECT_DIR$/src/ru/ifmo/Sokoban.java" />
       </list>
     </option>
@@ -128,7 +165,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>Abstraction issues</id>
+            <id>Ant inspections</id>
           </State>
         </selected-state>
       </profile-state>
@@ -194,10 +231,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="ifmo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Sokoban.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -371,7 +404,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -456,6 +489,18 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Sokoban" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Sokoban" />
+        <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
@@ -466,17 +511,15 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#332#341#0" expanded="true" />
-            <element signature="e#396#402#0" expanded="true" />
-            <element signature="e#457#463#0" expanded="true" />
-            <element signature="e#746#756#0" expanded="true" />
-            <element signature="e#1566#1576#0" expanded="true" />
-            <element signature="e#5217#5223#0" expanded="true" />
-            <element signature="e#8392#8402#0" expanded="true" />
-            <element signature="e#13537#13545#0" expanded="true" />
-            <element signature="e#13871#13879#0" expanded="true" />
-            <element signature="e#18027#18033#0" expanded="true" />
-            <element signature="e#21103#21109#0" expanded="true" />
+            <element signature="e#346#355#0" expanded="true" />
+            <element signature="e#410#416#0" expanded="true" />
+            <element signature="e#471#477#0" expanded="true" />
+            <element signature="e#760#770#0" expanded="true" />
+            <element signature="e#1580#1590#0" expanded="true" />
+            <element signature="e#5231#5237#0" expanded="true" />
+            <element signature="e#8406#8416#0" expanded="true" />
+            <element signature="e#13551#13559#0" expanded="true" />
+            <element signature="e#13885#13893#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -493,17 +536,15 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#332#341#0" expanded="true" />
-            <element signature="e#396#402#0" expanded="true" />
-            <element signature="e#457#463#0" expanded="true" />
-            <element signature="e#746#756#0" expanded="true" />
-            <element signature="e#1566#1576#0" expanded="true" />
-            <element signature="e#5217#5223#0" expanded="true" />
-            <element signature="e#8392#8402#0" expanded="true" />
-            <element signature="e#13537#13545#0" expanded="true" />
-            <element signature="e#13871#13879#0" expanded="true" />
-            <element signature="e#18027#18033#0" expanded="true" />
-            <element signature="e#21103#21109#0" expanded="true" />
+            <element signature="e#346#355#0" expanded="true" />
+            <element signature="e#410#416#0" expanded="true" />
+            <element signature="e#471#477#0" expanded="true" />
+            <element signature="e#760#770#0" expanded="true" />
+            <element signature="e#1580#1590#0" expanded="true" />
+            <element signature="e#5231#5237#0" expanded="true" />
+            <element signature="e#8406#8416#0" expanded="true" />
+            <element signature="e#13551#13559#0" expanded="true" />
+            <element signature="e#13885#13893#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -512,6 +553,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/ifmo/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/ifmo/Pair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="39" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/ifmo/APath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="61" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#569#575#0" expanded="true" />
+            <element signature="e#3645#3651#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -524,20 +590,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/ifmo/Sokoban.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="45" selection-start="3572" selection-end="3572" vertical-scroll-proportion="0.64324325">
+        <state line="15" column="33" selection-start="264" selection-end="264" vertical-scroll-proportion="0.43396226">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#332#341#0" expanded="true" />
-            <element signature="e#396#402#0" expanded="true" />
-            <element signature="e#457#463#0" expanded="true" />
-            <element signature="e#746#756#0" expanded="true" />
-            <element signature="e#1566#1576#0" expanded="true" />
-            <element signature="e#5217#5223#0" expanded="true" />
-            <element signature="e#8392#8402#0" expanded="true" />
-            <element signature="e#13537#13545#0" expanded="true" />
-            <element signature="e#13871#13879#0" expanded="true" />
-            <element signature="e#18027#18033#0" expanded="true" />
-            <element signature="e#21103#21109#0" expanded="true" />
+            <element signature="e#346#355#0" expanded="true" />
+            <element signature="e#410#416#0" expanded="true" />
+            <element signature="e#471#477#0" expanded="true" />
+            <element signature="e#760#770#0" expanded="true" />
+            <element signature="e#1580#1590#0" expanded="true" />
+            <element signature="e#5231#5237#0" expanded="true" />
+            <element signature="e#8406#8416#0" expanded="true" />
+            <element signature="e#13551#13559#0" expanded="true" />
+            <element signature="e#13885#13893#0" expanded="true" />
           </folding>
         </state>
       </provider>
