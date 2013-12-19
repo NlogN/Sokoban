@@ -9,8 +9,11 @@ import java.util.Queue;
  * Date: 19.12.13
  * Time: 2:46
  */
+
+
 public class APath {
 
+    // находит кратчайший путь сокобана из его текущего положения до поля с координатами (p, q)
     public static String getMoveSequence(byte[][] a, int p, int q) {
         String res = "";
         Pair sokPos = Sokoban.getSokobanField(a);
@@ -100,7 +103,8 @@ public class APath {
 
     }
 
-
+    // находит длину кратчайшего пути от ящика до ближайшей цели
+    // (p,q) -  координаты ящика
     public static int closestGoalDistance(byte[][] a, int p, int q) {
         for (Pair pair : Sokoban.goalFieldList) {
             int x = pair.getX();
@@ -200,15 +204,4 @@ public class APath {
     }
 
 
-    public static void print(byte[][] a) {
-        int k = a.length;
-        int l = a[0].length;
-        for (int i = 0; i < k; i++) {
-            for (int j = 0; j < l; j++) {
-                System.out.print(a[i][j]);
-            }
-            System.out.println();
-        }
-
-    }
 }

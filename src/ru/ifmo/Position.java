@@ -7,10 +7,11 @@ package ru.ifmo;
  * Time: 2:47
  */
 
+// конфигурация уровня
 public class Position implements Comparable {
-    byte[][] a;
-    String moveSequence;
-    int score = 10000;
+    byte[][] a;  // содержит положение всех объектов позиции
+    String moveSequence; // последовательность движений sokoban
+    int sumDist = 10000;
 
     public Position(byte[][] a, String path) {
         this.a = a;
@@ -27,7 +28,7 @@ public class Position implements Comparable {
                 }
             }
         }
-        this.score = sum;
+        this.sumDist = sum;
 
     }
 
@@ -75,7 +76,7 @@ public class Position implements Comparable {
     public int compareTo(Object obj) {
         Position entry = (Position) obj;
 
-        int result = score - entry.score;
+        int result = sumDist - entry.sumDist;
         if (result != 0) {
             return (int) result / Math.abs(result);
         }

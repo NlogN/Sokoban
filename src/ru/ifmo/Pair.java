@@ -6,6 +6,8 @@ package ru.ifmo;
  * Date: 19.12.13
  * Time: 2:47
  */
+
+
 public class Pair {
     int x;
     int y;

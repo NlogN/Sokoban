@@ -17,22 +17,18 @@ import java.util.*;
 
 public class Sokoban {
 
-    static HashSet<Integer> allPositionSet = new HashSet<Integer>();
-    static List<Pair> goalFieldList = new ArrayList<Pair>();
-    static List<Pair> lockFieldList = new ArrayList<Pair>();
+    static HashSet<Integer> allPositionSet = new HashSet<Integer>();   // содежит hashcode всех рассмотренных позиций
+    static List<Pair> goalFieldList = new ArrayList<Pair>();   // список полей, в которых нахядятся цели '.'
+    static List<Pair> lockFieldList = new ArrayList<Pair>();   // список полей, из которых не достать ящик
 
-    static boolean stop = false;
+    static boolean stop = false;  // проверка того, найдено ли решение
 
+    // построение решения
+    // принимает на вход начальную позицию
+    static void solution(Position startPosition) throws IOException {
 
-    public static void main(String[] args) throws IOException {
-
-        byte[][] a = getInputData();
-        setLockFieldList(a);
-
-        Position startPosition = new Position(a, "");
         HashSet<Position> levelPositionList = new HashSet<Position>();
         levelPositionList.add(startPosition);
-
 
         for (int i = 0; i < 100; i++) {
             for (Position position : levelPositionList) {
@@ -45,36 +41,45 @@ public class Sokoban {
             if (stop) {
                 return;
             }
-
-           // System.out.println("level# " + i);
-          //  System.out.println(levelPositionList.size());
-//            if(i==50){
-//                for (Position p:levelList){
-//                    print(p);
-//                }
-//            }
         }
+    }
 
+
+    public static void main(String[] args) throws IOException {
+
+        // чтение входных данных
+        String filePath = "input";
+        byte[][] a = getInputData(filePath);
+
+        // заполенние lockFieldList
+        setLockFieldList(a);
+
+        // начальная позиция
+        Position startPosition = new Position(a, "");
+
+        solution(startPosition);
 
     }
 
 
-
-
+    // построение следующего уровня позиций
+    // принимает на вход текущий уровень levelPositionList
     static HashSet<Position> getNextLevelList(HashSet<Position> levelPositionList) {
-        HashSet<Position> newLevelPositionList = new HashSet<Position>();
 
-        Object[]  posArray = levelPositionList.toArray();
+        HashSet<Position> newLevelPositionList = new HashSet<Position>();
+        Object[] posArray = levelPositionList.toArray();
         levelPositionList.clear();
         Arrays.sort(posArray);
-        int l = posArray.length / 2;
+        int m = posArray.length / 2;  // выбор части позиций с меньшим sumDist
+
         for (int j = 0; j < posArray.length; j++) {
 
             Position position = (Position) posArray[j];
 
 
             HashSet<Position> newList = getNewPositionList(position);
-            if (j < l) {
+            // двойной рост уровня для позиций с меньшим sumDist
+            if (j < m) {
                 Object[] addList = newList.toArray();
                 for (Object obj : addList) {
                     HashSet<Position> newList1 = getNewPositionList((Position) obj);
@@ -97,20 +102,20 @@ public class Sokoban {
                     break;
                 }
             }
-            if(stop){
+            if (stop) {
                 break;
             }
 
         }
 
-       return newLevelPositionList;
+        return newLevelPositionList;
     }
 
-
-    public static byte[][] getInputData() throws IOException {
+    // чтение входных данных
+    public static byte[][] getInputData(String path) throws IOException {
         int k = 0;
         int l = 0;
-        List<String> list = getInputList1();
+        List<String> list = getInputList1(path);
         for (String line : list) {
             k++;
             l = Math.max(l, line.length());
@@ -156,15 +161,8 @@ public class Sokoban {
         return a;
     }
 
-    public static void printLock(byte[][] a) {
-        byte[][] newArr1 = getCopy(a);
-        for (Pair p : lockFieldList) {
-            newArr1[p.y][p.x] = 8;
-        }
-        APath.print(newArr1);
 
-    }
-
+    // проверка позиции на содержание deadLock
     public static boolean checkLock(byte[][] a) {
         for (Pair pair : lockFieldList) {
             if (a[pair.y][pair.x] == 2) {
@@ -175,6 +173,8 @@ public class Sokoban {
         return true;
     }
 
+    // заполнение lockFieldList
+    // принимает на вход поле a стартовой позиции
     static void setLockFieldList(byte[][] a) {
         int k = a.length;
         int l = a[0].length;
@@ -268,11 +268,13 @@ public class Sokoban {
 
     }
 
+    // вычисление hashCode для позиции
     public static int hashCode(Position pos) {
         return Arrays.hashCode(pos.a);
     }
 
 
+    // построение списка позиций, который можно получить из позиции pos сдвинув один из ящиков на соседнюю клетку
     static HashSet<Position> getNewPositionList(Position pos) {
         HashSet<Position> newPositionList = new HashSet<Position>();
 
@@ -358,7 +360,7 @@ public class Sokoban {
         return newPositionList;
     }
 
-
+    // проверяет, не исчезла ли одна из целей '.'
     static void checkGoalFields(byte[][] a) {
         for (Pair pair : goalFieldList) {
             int x = pair.getX();
@@ -369,7 +371,8 @@ public class Sokoban {
         }
     }
 
-
+    // проверяет наличие цели '.' в указанном поле
+    // принимает координаты поля (p,q)
     static boolean isGoalField(int p, int q) {
         for (Pair pair : goalFieldList) {
             int x = pair.getX();
@@ -382,14 +385,12 @@ public class Sokoban {
     }
 
 
-
     static void print1(Position pos, Position newPos) {
-//        System.out.println("======" );
 //        print(pos);
 //        print(newPos);
     }
 
-
+    // возвращает копию массива
     public static byte[][] getCopy(byte[][] a) {
         int k = a.length;
         int l = a[0].length;
@@ -402,6 +403,7 @@ public class Sokoban {
         return a1;
     }
 
+    // чтение входных данных из консоли
     public static List<String> getInputList2() throws IOException {
         BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
         String line;
@@ -413,8 +415,9 @@ public class Sokoban {
         return list;
     }
 
-    public static List<String> getInputList1() throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("input"));
+    // чтение входных данных из файла
+    public static List<String> getInputList1(String path) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(path));
         String line;
         List<String> list = new ArrayList<String>();
         while ((line = reader.readLine()) != null) {
@@ -424,7 +427,7 @@ public class Sokoban {
         return list;
     }
 
-
+    // проверяет стоят ли все ящики на целях
     public static boolean isComplete(byte[][] a) {
         boolean t = true;
         for (Pair pair : goalFieldList) {
@@ -439,41 +442,7 @@ public class Sokoban {
     }
 
 
-    public static void print(Position pos) {
-        System.out.println(pos.hashCode());
-        System.out.println(pos.moveSequence);
-        print(pos.a);
-    }
-
-
-    public static void print(byte[][] a) {
-        int k = a.length;
-        int l = a[0].length;
-        for (int i = 0; i < k; i++) {
-            for (int j = 0; j < l; j++) {
-                if (a[i][j] == 1) {
-                    System.out.print("#");
-                }
-                if (a[i][j] == 0) {
-                    System.out.print(" ");
-                }
-                if (a[i][j] == 5) {
-                    System.out.print("@");
-                }
-                if (a[i][j] == 2) {
-                    System.out.print("$");
-                }
-                if (a[i][j] == 3) {
-                    System.out.print(".");
-                }
-
-            }
-            System.out.println();
-        }
-        System.out.println();
-    }
-
-
+    // возвращает координаты поля, в котором находится sokoban
     public static Pair getSokobanField(byte[][] a) {
         int k = a.length;
         int l = a[0].length;
