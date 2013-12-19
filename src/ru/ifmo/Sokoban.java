@@ -70,7 +70,7 @@ public class Sokoban {
         Object[] posArray = levelPositionList.toArray();
         levelPositionList.clear();
         Arrays.sort(posArray);
-        int m = posArray.length / 2;  // выбор части позиций с меньшим sumDist
+        int m = posArray.length / 2;
 
         for (int j = 0; j < posArray.length; j++) {
 
@@ -78,8 +78,8 @@ public class Sokoban {
 
 
             HashSet<Position> newList = getNewPositionList(position);
-            // двойной рост уровня для позиций с меньшим sumDist
-            if (j < m) {
+            //  построение следующей позиции дважды для позиций с меньшим sumDist
+            if (j < m) {// выбор части позиций с меньшим sumDist
                 Object[] addList = newList.toArray();
                 for (Object obj : addList) {
                     HashSet<Position> newList1 = getNewPositionList((Position) obj);
@@ -174,7 +174,6 @@ public class Sokoban {
     }
 
     // заполнение lockFieldList
-    // принимает на вход поле a стартовой позиции
     static void setLockFieldList(byte[][] a) {
         int k = a.length;
         int l = a[0].length;

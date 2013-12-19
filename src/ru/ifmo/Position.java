@@ -84,5 +84,17 @@ public class Position implements Comparable {
 
     }
 
+    public  void print() {
+        int k = a.length;
+        int l = a[0].length;
+        for (int i = 0; i < k; i++) {
+            for (int j = 0; j < l; j++) {
+                System.out.print(a[i][j]);
+            }
+            System.out.println();
+        }
+
+    }
+
 
 }
